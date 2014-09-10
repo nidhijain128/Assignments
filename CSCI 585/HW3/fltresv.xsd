@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.w3schools.com" xmlns="http://www.w3schools.com" elementFormDefault="qualified">
+  <xs:simpleType name="flightNoType">
+		<xs:restriction base="xs:integer">
+			<xs:minExclusive value="9"/>
+			<xs:maxExclusive value="1000"/>
+			<xs:pattern value="[1-9]{1}[0-9]{1,2}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:complexType name="flightType">
+		<xs:sequence>
+			<xs:element name="flight" minOccurs="1" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="flightNo" minOccurs="1" maxOccurs="1" type="flightNoType"/> 
+						<xs:element name="departTime" minOccurs="1" maxOccurs="1" type="xs:time"/>
+						<xs:element name="duration" minOccurs="1" maxOccurs="1">
+							<xs:complexType>
+								<xs:simpleContent>
+									<xs:extension base="xs:integer">
+										<xs:attribute name="unit" type="xs:string" default="min"/>
+									</xs:extension>
+								</xs:simpleContent>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="capacity" minOccurs="1" maxOccurs="1">
+							<xs:simpleType>
+								<xs:restriction base="xs:integer">
+								   <xs:minInclusive value="1"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="seasonal" minOccurs="1" maxOccurs="1" type="xs:boolean"/>
+						<xs:element name="origin" minOccurs="1" maxOccurs="1" type="xs:string"/>
+						<xs:element name="destination" minOccurs="1" maxOccurs="1" type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="requestType">
+		<xs:sequence>
+			<xs:element name="request" minOccurs="1" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="agentName" minOccurs="1" maxOccurs="1" type="xs:string"/>
+						<xs:element name="requestDate" minOccurs="1" maxOccurs="1">
+							<xs:simpleType>
+								<xs:restriction base="xs:date"/>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="contactPerson" minOccurs="0" maxOccurs="1">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1"/>
+									<xs:element name="phone" minOccurs="1" maxOccurs="1">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:pattern value="[0-9]{3}\-[0-9a-zA-Z]{3}\-[0-9a-zA-Z]{4}"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="reservation" minOccurs="1" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="flight" minOccurs="1" maxOccurs="1" type="flightNoType"/>
+									<xs:element name="travelDate" minOccurs="1" maxOccurs="1" type="xs:date"/>
+									<xs:element name="noOfSeats" minOccurs="1" maxOccurs="1"> 
+										<xs:simpleType>
+											<xs:restriction base="xs:integer">
+												<xs:minInclusive value="1"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:element name="airline">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="flights" type="flightType"/>
+				<xs:element name="requests" type="requestType"/> 
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
+		

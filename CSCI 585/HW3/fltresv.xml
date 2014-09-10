@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<airline
+  xmlns="http://www.w3schools.com"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.w3schools.com fltresv.xsd">
+	<flights>
+		<flight> 
+			<flightNo>215</flightNo>
+			<departTime>13:40:00</departTime>
+			<duration unit="min">57</duration>
+			<capacity>30</capacity>
+			<seasonal>false</seasonal>
+			<origin>Los Angeles</origin>
+			<destination>San Francisco</destination>
+		</flight>
+		<flight> 
+			<flightNo>113</flightNo>
+			<departTime>14:50:00</departTime>
+			<duration unit="min">70</duration>
+			<capacity>80</capacity>
+			<seasonal>false</seasonal>
+			<origin>Los Angeles</origin>
+			<destination>Salt Lake City</destination>
+		</flight>
+		<flight> 
+			<flightNo>114</flightNo>
+			<departTime>16:00:00</departTime>
+			<duration unit="min">180</duration>
+			<capacity>30</capacity>
+			<seasonal>true</seasonal>
+			<origin>San Francisco</origin>
+			<destination>Minneapolis</destination>
+		</flight>
+		<flight> 
+			<flightNo>675</flightNo>
+			<departTime>09:07:00</departTime>
+			<duration unit="min">294</duration>
+			<capacity>102</capacity>
+			<seasonal>false</seasonal>
+			<origin>San Francisco</origin>
+			<destination>New York</destination>
+		</flight>
+		<flight> 
+			<flightNo>879</flightNo>
+			<departTime>09:30:00</departTime>
+			<duration unit="min">138</duration>
+			<capacity>24</capacity>
+			<seasonal>false</seasonal>
+			<origin>Los Angeles</origin>
+			<destination>Seattle</destination>
+		</flight>
+		<flight> 
+			<flightNo>124</flightNo>
+			<departTime>20:00:00</departTime>
+			<duration unit="min">50</duration>
+			<capacity>58</capacity>
+			<seasonal>true</seasonal>
+			<origin>Los Angeles</origin>
+			<destination>San Jose</destination>
+		</flight>
+		<flight> 
+			<flightNo>156</flightNo>
+			<departTime>12:50:00</departTime>
+			<duration unit="min">270</duration>
+			<capacity>124</capacity>
+			<seasonal>false</seasonal>
+			<origin>Seattle</origin>
+			<destination>Washington</destination>
+		</flight>
+		<flight> 
+			<flightNo>354</flightNo>
+			<departTime>10:46:00</departTime>
+			<duration unit="min">57</duration>
+			<capacity>60</capacity>
+			<seasonal>false</seasonal>
+			<origin>Los Angeles</origin>
+			<destination>San Francisco</destination>
+		</flight>
+		<flight> 
+			<flightNo>567</flightNo>
+			<departTime>17:30:00</departTime>
+			<duration unit="min">145</duration>
+			<capacity>45</capacity>
+			<seasonal>false</seasonal>
+			<origin>Seattle</origin>
+			<destination>Phoenix</destination>
+		</flight>
+		<flight> 
+			<flightNo>845</flightNo>
+			<departTime>07:34:00</departTime>
+			<duration unit="min">287</duration>
+			<capacity>100</capacity>
+			<seasonal>false</seasonal>
+			<origin>Los Angeles</origin>
+			<destination>New York</destination>
+		</flight>
+	</flights>
+	<requests>
+		<request>
+			<agentName>Tee Adventures</agentName>
+			<requestDate>2013-08-30</requestDate>
+			<contactPerson>
+				<name>Thomas Karcher</name>
+				<phone>293-856-9134</phone>
+			</contactPerson>
+			<reservation>
+				<flight>113</flight>
+				<travelDate>2013-11-20</travelDate>
+				<noOfSeats>5</noOfSeats>
+			</reservation>
+		</request>
+		<request>
+			<agentName>Sinclair Travel</agentName>
+			<requestDate>2013-08-25</requestDate>
+			<contactPerson>
+				<name>William King</name>
+				<phone>103-333-8840</phone>
+			</contactPerson>
+			<reservation>
+				<flight>215</flight>
+				<travelDate>2013-11-22</travelDate>
+				<noOfSeats>6</noOfSeats>
+			</reservation>
+		</request>
+		<request>
+			<agentName>Iberica Travel</agentName>
+			<requestDate>2013-08-30</requestDate>
+			<contactPerson>
+				<name>Carol Sawyer</name>
+				<phone>107-834-8900</phone>
+			</contactPerson>
+			<reservation>
+				<flight>215</flight>
+				<travelDate>2013-11-22</travelDate>
+				<noOfSeats>10</noOfSeats>
+			</reservation>
+		</request>
+		<request>
+			<agentName>Norco Travel</agentName>
+			<requestDate>2013-10-05</requestDate>
+			<reservation>
+				<flight>675</flight>
+				<travelDate>2013-12-05</travelDate>
+				<noOfSeats>8</noOfSeats>
+			</reservation>
+		</request>
+		<request>
+			<agentName>Tee Adventures</agentName>
+			<requestDate>2013-10-09</requestDate>
+			<contactPerson>
+				<name>Albert Parks</name>
+				<phone>224-980-8907</phone>
+			</contactPerson>
+			<reservation>
+				<flight>879</flight>
+				<travelDate>2013-12-24</travelDate>
+				<noOfSeats>14</noOfSeats>
+			</reservation>
+		</request>
+		<request>
+			<agentName>Voyagers Amerik</agentName>
+			<requestDate>2013-09-24</requestDate>
+			<contactPerson>
+				<name>Geoff Marks</name>
+				<phone>213-908-4564</phone>
+			</contactPerson>
+			<reservation>
+				<flight>567</flight>
+				<travelDate>2013-12-06</travelDate>
+				<noOfSeats>4</noOfSeats>
+			</reservation>
+		</request>
+		<request>
+			<agentName>Gold Tours</agentName>
+			<requestDate>2013-10-31</requestDate>
+			<contactPerson>
+				<name>Samantha Grace</name>
+				<phone>213-786-9035</phone>
+			</contactPerson>
+			<reservation>
+				<flight>215</flight>
+				<travelDate>2013-11-22</travelDate>
+				<noOfSeats>7</noOfSeats>
+			</reservation>
+		</request>
+		<request>
+			<agentName>Metro Tours</agentName>
+			<requestDate>2013-08-07</requestDate>
+			<contactPerson>
+				<name>Chuck Bartowski</name>
+				<phone>310-987-7828</phone>
+			</contactPerson>
+			<reservation>
+				<flight>354</flight>
+				<travelDate>2013-11-23</travelDate>
+				<noOfSeats>11</noOfSeats>
+			</reservation>
+		</request>
+		<request>
+			<agentName>Mayfield Travel</agentName>
+			<requestDate>2013-10-09</requestDate>
+			<contactPerson>
+				<name>Pearl Gardner</name>
+				<phone>264-654-9083</phone>
+			</contactPerson>
+			<reservation>
+				<flight>215</flight>
+				<travelDate>2013-12-05</travelDate>
+				<noOfSeats>6</noOfSeats>
+			</reservation>
+		</request>
+		<request>
+			<agentName>Metro Tours</agentName>
+			<requestDate>2013-11-01</requestDate>
+			<reservation>
+				<flight>215</flight>
+				<travelDate>2013-11-22</travelDate>
+				<noOfSeats>8</noOfSeats>
+			</reservation>
+		</request>
+	</requests>
+</airline>
