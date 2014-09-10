@@ -1,0 +1,3 @@
+select distinct u1.nickname as user1_nickname, u1.city || ' ' || u1.state || ' ' || u1.country as user1_location, u1.emailId as user1_email, u2.nickname as user2_nickname, u2.city || ' ' || u2.state || ' ' || u2.country as user2_location, u2.emailId as user2_email
+from users_follows uf1, users_follows uf2, users u1, users u2
+where uf1.userId = u1.userId and uf2.userId = u2.userId and uf1.userId = uf2.follows and uf1.follows = uf2.userId and uf1.userId > uf2.userId
