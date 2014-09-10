@@ -1,0 +1,137 @@
+<html>
+<head>
+<title>Homework 4</title>
+<style type="text/css">
+form {
+	padding-top: 10%;
+}
+
+img {
+	width: 50%;
+}
+</style>
+<script type="text/javascript">
+	
+	function loadXML(inputString) {
+		if (window.XMLHttpRequest)
+		{
+			xmlhttp=new XMLHttpRequest();
+		}
+		else
+		{
+			xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		xmlhttp.open("GET",inputString,false);
+		xmlhttp.send();
+		xmlDoc=xmlhttp.responseXML;
+		return xmlDoc;
+	}
+
+	function is_all_ws(s)
+	{
+		return !(/[^\t\n\r ]/.test(s));
+	}
+	
+	function parseXMLDoc()
+	{
+		var inputString = document.URLText.Book.value;
+		var xmlDoc = loadXML(inputString);
+		var flag = is_all_ws(inputString);
+		if(inputString == "" || flag == true)
+			alert("Please enter a URL");
+		else if (xmlDoc.documentElement.nodeName == "parsererror")
+				alert("Error in XML file - Please enter name of a valid XML file");
+			else {
+				var catalogs = xmlDoc.getElementsByTagName("catalog");
+				var catalog = catalogs[0];
+				var x = catalog.getElementsByTagName("book");
+				if(x.length == 0)
+					alert("An error was detected - No book details available for display.");
+				else {
+					myWindow=window.open('','','fullscreen=yes,scrollbars=yes');
+					myWindow.document.write("<html><body><table border='1'>");
+					myWindow.document.write("<tr><th>author</th><th>title</th><th>genre</th><th>price</th><th>publish_date</th><th>desciption</th><th>image</th></tr>");
+					for(var j = 0; j < x.length; j++) {
+						myWindow.document.write("<tr><td>&nbsp;");
+						if(x[j].getElementsByTagName("author").length != 0 && x[j].getElementsByTagName("author")[0].childNodes.length != 0)
+						{
+							if(is_all_ws(x[j].getElementsByTagName("author")[0].childNodes[0].nodeValue))
+								myWindow.document.write("&nbsp;");
+							else
+								myWindow.document.write(x[j].getElementsByTagName("author")[0].childNodes[0].nodeValue);
+						}
+						else myWindow.document.write("&nbsp;");
+						myWindow.document.write("</td><td>&nbsp;");
+						if(x[j].getElementsByTagName("title").length != 0 && x[j].getElementsByTagName("title")[0].childNodes.length != 0)
+						{
+							if(is_all_ws(x[j].getElementsByTagName("title")[0].childNodes[0].nodeValue))
+								myWindow.document.write("&nbsp;");
+							else	
+								myWindow.document.write(x[j].getElementsByTagName("title")[0].childNodes[0].nodeValue);
+						}
+						else myWindow.document.write("&nbsp;");
+						myWindow.document.write("</td><td>");
+						if(x[j].getElementsByTagName("genre").length != 0 && x[j].getElementsByTagName("genre")[0].childNodes.length != 0)
+						{
+							if(is_all_ws(x[j].getElementsByTagName("genre")[0].childNodes[0].nodeValue))
+								myWindow.document.write("&nbsp;");
+							else
+								myWindow.document.write(x[j].getElementsByTagName("genre")[0].childNodes[0].nodeValue);
+						}
+						else myWindow.document.write("&nbsp;");
+						myWindow.document.write("</td><td>&nbsp;");
+						if(x[j].getElementsByTagName("price").length != 0 && x[j].getElementsByTagName("price")[0].childNodes.length != 0)
+						{
+							if(is_all_ws(x[j].getElementsByTagName("price")[0].childNodes[0].nodeValue))
+								myWindow.document.write("&nbsp;");
+							else	
+								myWindow.document.write(x[j].getElementsByTagName("price")[0].childNodes[0].nodeValue);
+						}
+						else myWindow.document.write("&nbsp;");
+						myWindow.document.write("</td><td>&nbsp;");
+						if(x[j].getElementsByTagName("publish_date").length != 0 && x[j].getElementsByTagName("publish_date")[0].childNodes.length != 0)
+						{
+							if(is_all_ws(x[j].getElementsByTagName("publish_date")[0].childNodes[0].nodeValue))
+								myWindow.document.write("&nbsp;");
+							else	
+								myWindow.document.write(x[j].getElementsByTagName("publish_date")[0].childNodes[0].nodeValue);
+						}	
+						else myWindow.document.write("&nbsp;");
+						myWindow.document.write("</td><td>&nbsp;");
+						if(x[j].getElementsByTagName("description").length != 0 && x[j].getElementsByTagName("description")[0].childNodes.length != 0)
+						{
+							if(is_all_ws(x[j].getElementsByTagName("description")[0].childNodes[0].nodeValue))
+								myWindow.document.write("&nbsp;");
+							else	
+								myWindow.document.write(x[j].getElementsByTagName("description")[0].childNodes[0].nodeValue);
+						}
+						else myWindow.document.write("&nbsp;");
+						myWindow.document.write("</td><td>&nbsp;");
+						if(x[j].getElementsByTagName("image").length != 0 && x[j].getElementsByTagName("image")[0].childNodes.length != 0)
+						{
+							if(is_all_ws(x[j].getElementsByTagName("image")[0].childNodes[0].nodeValue))
+								myWindow.document.write("&nbsp;");
+							else
+							{
+								var imageName = x[j].getElementsByTagName("image")[0].childNodes[0].nodeValue;
+								myWindow.document.write("<img width=140px height=170px src=" + imageName + ">");
+							}
+						}
+						else myWindow.document.write("&nbsp;");
+						myWindow.document.write("</td></tr>");
+					}
+					myWindow.document.write("</table><noscript><!--</body>--></html>");
+				}
+			}
+	}
+</script>
+</head>
+
+<body><center>
+<form name="URLText" id="URLText">
+	Enter URL for Book XML File<br><input type="text" id="Book" name="Book" size="50" autofocus><br><br>
+    <input type="submit" value="Submit Query" onClick="parseXMLDoc()">	
+</form></center>
+<noscript>
+<!--</body>-->
+</html>
