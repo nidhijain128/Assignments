@@ -1,0 +1,14 @@
+PREFIX  rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX  dbpedia-owl:  <http://dbpedia.org/ontology/>
+PREFIX  dbpprop:  <http://dbpedia.org/property/>
+
+SELECT ?industryName (sum(?numberOfEmployees) as ?totalNumberOfEmployees)  WHERE {
+  ?companyName rdf:type <http://dbpedia.org/class/yago/Company108058098> .
+  ?companyName dbpprop:type ?companyType .
+  ?companyType rdf:type <http://dbpedia.org/class/yago/PrivatelyHeldCompanies> .
+  ?companyName dbpedia-owl:numberOfEmployees ?numberOfEmployees .
+  ?companyName dbpprop:industry ?industryName .
+}
+group by ?industryName
+order by desc(?totalNumberOfEmployees)
+LIMIT 10

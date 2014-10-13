@@ -1,0 +1,11 @@
+PREFIX  rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpprop:  <http://dbpedia.org/property/>
+PREFIX dbpedia-owl:  <http://dbpedia.org/ontology/>
+
+SELECT ?campusType (count(?campusType) as ?campusTypeCount) WHERE {
+  ?univName rdf:type <http://dbpedia.org/class/yago/UniversitiesAndCollegesInLosAngelesCounty,California> .
+  ?univName dbpedia-owl:type <http://dbpedia.org/resource/Public_university> .
+  ?univName dbpedia-owl:campus $campusType .
+}
+group by ?campusType
+LIMIT 10

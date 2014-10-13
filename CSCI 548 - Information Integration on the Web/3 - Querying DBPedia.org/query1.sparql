@@ -1,0 +1,10 @@
+PREFIX  rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpprop:  <http://dbpedia.org/property/>
+PREFIX dbpedia-owl:  <http://dbpedia.org/ontology/>
+
+SELECT ?univName ?numberOfStudents WHERE {
+  ?univName rdf:type <http://dbpedia.org/class/yago/UniversitiesAndCollegesInLosAngelesCounty,California> .
+  ?univName dbpedia-owl:numberOfStudents ?numberOfStudents .
+  FILTER (regex(?univName, "University_of_Southern_California") || regex(?univName, "University_of_California,_Los_Angeles"))
+}
+LIMIT 10

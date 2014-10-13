@@ -1,0 +1,27 @@
+PREFIX  rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX  dbpedia-owl:  <http://dbpedia.org/ontology/>
+PREFIX  dbres:  <http://dbpedia.org/resource/>
+PREFIX  dbpprop:  <http://dbpedia.org/property/>
+
+SELECT ?univName (?yearInteger as ?estYear) WHERE 
+{
+  {
+    ?univName rdf:type <http://dbpedia.org/class/yago/UniversitiesAndCollegesInLosAngelesCounty,California> .
+    ?univName dbpedia-owl:type ?univType .
+    FILTER(?univType = dbres:Private_university || ?univType = dbres:Public_university)
+    {
+      ?univName dbpprop:established ?yearDate .
+      FILTER(datatype(?yearDate) = xsd:date)
+      FILTER(?yearDate < now() - xsd:duration("P100Y"))
+      BIND(year(?yearDate) as ?yearInteger)
+    }
+    UNION
+    {
+      ?univName dbpprop:established ?yearInteger .
+      FILTER(datatype(?yearInteger) = xsd:integer)
+      FILTER(?yearInteger < year(now()) - 100)
+    }
+  }
+}
+order by ?estYear ?univName
+LIMIT 10

@@ -1,0 +1,24 @@
+@prefix schema: <https://www.//schema.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix myValues: <http://www.nidhipjain.com/> .
+
+<http://www.nationalgallery.org.uk/paintings/imitator-of-raphael-portrait-of-a-young-man> schema:creator <http://www.nationalgallery.org.uk/artists/raphael> .
+<http://www.nationalgallery.org.uk/paintings/imitator-of-raphael-portrait-of-a-young-man> rdf:type schema:Painting .
+<http://www.nationalgallery.org.uk/artists/raphael> rdf:type schema:Person .
+<http://www.nationalgallery.org.uk/artists/raphael>  schema:birthDate "1483" .
+<http://www.nationalgallery.org.uk/artists/raphael> schema:deathDate "1520" .
+<http://www.nationalgallery.org.uk/artists/raphael>  schema:name "Imitator of Raphael" .
+<http://www.nationalgallery.org.uk/paintings/imitator-of-raphael-portrait-of-a-young-man> schema:description "Oil on wood" .
+<http://www.nationalgallery.org.uk/paintings/imitator-of-raphael-portrait-of-a-young-man> schema:dateCreated "early 16th and late 19th century" .
+<http://www.nationalgallery.org.uk/paintings/imitator-of-raphael-portrait-of-a-young-man> schema:image <http://www.nationalgallery.org.uk/upload/img/raphael-portrait-young-man-NG2510-ft.jpg> .
+<http://www.nationalgallery.org.uk/paintings/imitator-of-raphael-portrait-of-a-young-man> schema:serialNumber "NG2510" .
+<http://www.nationalgallery.org.uk/paintings/imitator-of-raphael-portrait-of-a-young-man> schema:contentLocation "Not on Display" .
+<http://www.nationalgallery.org.uk/paintings/imitator-of-raphael-portrait-of-a-young-man> schema:name "Portrait of a Young Man" .
+_:accountablePerson a schema:Person .
+<http://www.nationalgallery.org.uk/paintings/imitator-of-raphael-portrait-of-a-young-man> schema:accountablePerson _:accontablePerson .
+_:accountablePerson rdf:type myValues:Dims .
+_:accountablePerson schema:name "Salting Bequest" .
+_:accountablePerson myValues:yearPurchased "1910" .
+<http://www.nationalgallery.org.uk/paintings/imitator-of-raphael-portrait-of-a-young-man> myValues:dimensions _:dimensions .
+_:dimensions schema:height "26.6 cm" .
+_:dimensions schema:width "21.6 cm" .

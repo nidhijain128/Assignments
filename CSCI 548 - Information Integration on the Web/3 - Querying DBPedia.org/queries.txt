@@ -1,0 +1,254 @@
+1.
+PREFIX  rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpprop:  <http://dbpedia.org/property/>
+PREFIX dbpedia-owl:  <http://dbpedia.org/ontology/>
+
+SELECT ?univName ?numberOfStudents WHERE {
+  ?univName rdf:type <http://dbpedia.org/class/yago/UniversitiesAndCollegesInLosAngelesCounty,California> .
+  ?univName dbpedia-owl:numberOfStudents ?numberOfStudents .
+  FILTER (regex(?univName, "University_of_Southern_California") || regex(?univName, "University_of_California,_Los_Angeles"))
+}
+
+
+2.
+PREFIX  rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpprop:  <http://dbpedia.org/property/>
+PREFIX dbpedia-owl:  <http://dbpedia.org/ontology/>
+
+SELECT * WHERE {
+  ?univName rdf:type <http://dbpedia.org/class/yago/UniversitiesAndCollegesInLosAngelesCounty,California> .
+  ?univName dbpprop:type <http://dbpedia.org/resource/Private_university> .
+  ?univName dbpedia-owl:numberOfStudents ?numberOfStudents .
+}
+ORDER BY DESC(?numberOfStudents)
+LIMIT 10
+
+
+
+3.
+PREFIX  rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpprop:  <http://dbpedia.org/property/>
+PREFIX dbpedia-owl:  <http://dbpedia.org/ontology/>
+
+SELECT ?campusType (count(?campusType) as ?campusTypeCount) WHERE {
+  ?univName rdf:type <http://dbpedia.org/class/yago/UniversitiesAndCollegesInLosAngelesCounty,California> .
+  ?univName dbpedia-owl:type <http://dbpedia.org/resource/Public_university> .
+  ?univName dbpedia-owl:campus $campusType .
+}
+group by ?campusType
+
+
+
+PREFIX  rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpprop:  <http://dbpedia.org/property/>
+PREFIX dbpedia-owl:  <http://dbpedia.org/ontology/>
+
+SELECT ?campusType (count(?campusType) as ?a) WHERE {
+  ?s rdf:type <http://dbpedia.org/class/yago/UniversitiesAndCollegesInLosAngelesCounty,California> .
+  ?s dbpedia-owl:type <http://dbpedia.org/resource/Public_university> .
+  ?s dbpedia-owl:campus $campusType .
+}
+group by ?campusType
+
+
+
+PREFIX  rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpedia-owl:  <http://dbpedia.org/ontology/>
+PREFIX dbpprop:  <http://dbpedia.org/property/>
+
+SELECT ?type (COUNT(?type) as ?COUNT) WHERE {
+   {
+     ?s rdf:type <http://dbpedia.org/class/yago/UniversitiesAndCollegesInLosAngelesCounty,California> .
+     ?city dbpedia-owl:isPartOf dbpedia:Los_Angeles .
+   OPTIONAL {?s dbpedia-owl:campus ?type.}
+   OPTIONAL {?s dbpprop:campus ?type.}
+   
+   } UNION
+   {
+     ?s rdf:type <http://dbpedia.org/class/yago/UniversitiesAndCollegesInLosAngelesCounty,California> .
+     ?city dbpedia-owl:isPartOf ?county .
+     ?county dbpprop:name "Los Angeles County, California"@en . 
+      OPTIONAL {?s dbpedia-owl:campus ?type.}
+   OPTIONAL {?s dbpprop:campus ?type.}
+   }    
+}GROUP BY (?type)
+
+
+4.
+PREFIX  rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX  dbpedia-owl:  <http://dbpedia.org/ontology/>
+PREFIX  dbres:  <http://dbpedia.org/resource/>
+PREFIX  dbpprop:  <http://dbpedia.org/property/>
+
+SELECT ?univName (year(?yearDate) as ?estYear) WHERE 
+{
+  {
+    ?univName rdf:type <http://dbpedia.org/class/yago/UniversitiesAndCollegesInLosAngelesCounty,California> .
+    ?univName dbpedia-owl:type ?univType .
+    FILTER(?univType = dbres:Private_university || ?univType = dbres:Public_university)
+    {
+      ?univName dbpprop:established ?yearInteger .
+      FILTER(datatype(?yearInteger) = xsd:integer && ?yearInteger<year(now()) - 100)
+      BIND(xsd:date(str(?yearInteger)) as ?yearDate)
+    }
+    UNION
+    {
+      ?univName <http://dbpedia.org/property/established> ?yearDate .
+      FILTER(datatype(?yearDate) = xsd:date && ?yearDate < xsd:date("1914-01-01"))
+    }
+  }
+}
+order by desc(?estYear)
+
+
+
+PREFIX  rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT distinct ?s ?estYears WHERE {
+{
+  ?s rdf:type <http://dbpedia.org/class/yago/UniversitiesAndCollegesInLosAngelesCounty,California> .
+  ?s <http://dbpedia.org/property/established> ?year .
+  ?s <http://dbpedia.org/property/type> ?univ .
+  FILTER (datatype(?year) = xsd:date)
+  BIND(((year(now())) - (year(?year))) AS ?estYears)
+}
+UNION
+{
+  ?s rdf:type <http://dbpedia.org/class/yago/UniversitiesAndCollegesInLosAngelesCounty,California> .
+  ?s <http://dbpedia.org/property/established> ?year .
+  ?s <http://dbpedia.org/property/type> ?univ .
+   FILTER (datatype(?year) = xsd:integer)
+  BIND(((year(now())) - ?year) AS ?estYears)
+}
+}
+order by DESC(?estYears)
+LIMIT 10
+
+
+
+PREFIX  rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX  xsd:  <http://www.w3.org/2001/XMLSchema>
+
+SELECT * WHERE {
+{
+  ?s rdf:type <http://dbpedia.org/class/yago/UniversitiesAndCollegesInLosAngelesCounty,California> .
+  ?s <http://dbpedia.org/property/established> ?univYear .
+  ?s <http://dbpedia.org/property/type> ?univ .
+  FILTER (datatype(?univYear) = xsd:date && (year(now()) - year(?univYear) > 100))
+}
+UNION
+{
+  ?s rdf:type <http://dbpedia.org/class/yago/UniversitiesAndCollegesInLosAngelesCounty,California> .
+  ?s <http://dbpedia.org/property/established> ?univYear1 .
+  ?s <http://dbpedia.org/property/type> ?univ .
+  FILTER (datatype(?univYear1) = xsd:integer && (year(now()) - ?univYear1 > 100))
+}
+}
+
+
+
+
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+ 
+SELECT distinct ?s WHERE
+{
+  ?s rdf:type <http://dbpedia.org/class/yago/UniversitiesAndCollegesInLosAngelesCounty,California> .
+  ?s <http://dbpedia.org/property/established> ?univYear1 .
+  ?s <http://dbpedia.org/property/type> ?univ .
+  FILTER (?univYear1<1914 || ?univYear1 <= xsd:date("1914-01-01"))
+}
+
+
+
+
+
+PREFIX  rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT distinct ?s ?univYear ?a WHERE {
+  {
+    SELECT ?univYear ?s ?a WHERE {
+      ?s rdf:type <http://dbpedia.org/class/yago/UniversitiesAndCollegesInLosAngelesCounty,California> .
+      ?s <http://dbpedia.org/property/established> ?univYear .
+      ?s <http://dbpedia.org/property/type> ?univ .
+      FILTER (datatype(?univYear) = xsd:date)
+      BIND(year(now()) as ?a)
+    }
+  }
+  BIND(year(?univYear) as ?b)
+  FILTER(?b <1914)
+}
+
+
+
+
+
+PREFIX  rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+
+select * where { 
+  values ?location { dbpedia-owl:city dbpprop:location } 
+  ?private ?location dbpedia:Los_Angeles ;
+           dbpprop:established ?established .
+
+  bind( xsd:int(year(now())) as ?nowYear )
+  bind( if( datatype(?established) = xsd:dateTime || datatype(?established) = xsd:date, 
+            year(xsd:dateTime(?established)),
+            if( datatype(?established) = xsd:integer || datatype(?established) = xsd:int,
+                xsd:int(?established),
+                ?nowYear ) )
+        as ?year )
+  bind( (?nowYear - ?year) as ?age )
+  FILTER(?age > xsd:integer(100))
+}
+order by ?age
+
+
+
+5.
+PREFIX  rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT ?b ?num (count(?b) as ?c) WHERE {
+  ?s rdf:type <http://dbpedia.org/class/yago/Company108058098> .
+  ?s <http://dbpedia.org/property/type> ?a .
+  ?a rdf:type <http://dbpedia.org/class/yago/PrivatelyHeldCompanies> .
+  ?s <http://dbpedia.org/ontology/numberOfEmployees> ?num .
+  ?s <http://dbpedia.org/property/industry> ?b .
+}
+group by ?b ?num
+order by DESC(?num)
+LIMIT 10
+
+
+
+
+
+
+
+
+
+
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/resource/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+
+SELECT DISTINCT ?university ?name ?city ?latitude ?longitude
+WHERE {
+?university dbpprop:type dbpedia:Private_university.
+?university dbpprop:state dbpedia:California.
+OPTIONAL {?university dbpprop:name ?name.}
+OPTIONAL {?university dbpprop:city ?city.}
+OPTIONAL {?university dbpedia-owl:city ?city.}
+OPTIONAL {?university dbpprop:label ?name.}
+OPTIONAL {?university rdfs:label ?name.}
+OPTIONAL {?university geo:lat ?latitude.}
+OPTIONAL {?university geo:long ?longitude.}
+OPTIONAL {?university dbpprop:lat ?latitude.}
+OPTIONAL {?university dbpprop:long ?longitude.}
+OPTIONAL {?university dbpprop:location ?city.}  
+}

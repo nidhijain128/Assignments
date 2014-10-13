@@ -1,0 +1,1 @@
+The file can be opened usig notepad or any basic editor.

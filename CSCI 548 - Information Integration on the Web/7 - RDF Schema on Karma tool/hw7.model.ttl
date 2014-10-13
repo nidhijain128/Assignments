@@ -1,0 +1,2088 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
+@prefix schemax: <http://topbraid.org/schemax/> .
+@prefix dcam: <http://purl.org/dc/dcam/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix schema: <http://schema.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix km-dev: <http://isi.edu/integration/karma/dev#> .
+
+_:node1943mnlcdx1 a km-dev:R2RMLMapping ;
+	km-dev:sourceName "datasetNationalGallery.json" ;
+	km-dev:modelPublicationTime "1413168747917"^^xsd:long ;
+	km-dev:modelVersion "1.7" ;
+	km-dev:hasInputColumns "[[{\"columnName\":\"paintings\"},{\"columnName\":\"Acquisition Received\"}],[{\"columnName\":\"paintings\"},{\"columnName\":\"Date made\"}],[{\"columnName\":\"paintings\"},{\"columnName\":\"Medium and support\"}],[{\"columnName\":\"paintings\"},{\"columnName\":\"Image Name\"}],[{\"columnName\":\"paintings\"},{\"columnName\":\"Artist dates\"}],[{\"columnName\":\"paintings\"},{\"columnName\":\"Full title\"}],[{\"columnName\":\"paintings\"},{\"columnName\":\"Artist\"}],[{\"columnName\":\"paintings\"},{\"columnName\":\"Inventory number\"}],[{\"columnName\":\"paintings\"},{\"columnName\":\"Inscription summary\"}],[{\"columnName\":\"paintings\"},{\"columnName\":\"Painting Height\"}],[{\"columnName\":\"paintings\"},{\"columnName\":\"Group\"}],[{\"columnName\":\"paintings\"},{\"columnName\":\"Location in Gallery\"}],[{\"columnName\":\"paintings\"},{\"columnName\":\"Painting Width\"}],[{\"columnName\":\"paintings\"},{\"columnName\":\"Image URL\"}],[{\"columnName\":\"paintings\"},{\"columnName\":\"Acquisition Credit\"}]]" ;
+	km-dev:hasOutputColumns "[[{\"columnName\":\"paintings\"},{\"columnName\":\"Acquisition Received\"}],[{\"columnName\":\"paintings\"},{\"columnName\":\"Date made\"}],[{\"columnName\":\"paintings\"},{\"columnName\":\"Medium and support\"}],[{\"columnName\":\"paintings\"},{\"columnName\":\"Image Name\"}],[{\"columnName\":\"paintings\"},{\"columnName\":\"Artist dates\"}],[{\"columnName\":\"paintings\"},{\"columnName\":\"Full title\"}],[{\"columnName\":\"paintings\"},{\"columnName\":\"Artist\"}],[{\"columnName\":\"paintings\"},{\"columnName\":\"Inventory number\"}],[{\"columnName\":\"paintings\"},{\"columnName\":\"Inscription summary\"}],[{\"columnName\":\"paintings\"},{\"columnName\":\"Painting Height\"}],[{\"columnName\":\"paintings\"},{\"columnName\":\"Group\"}],[{\"columnName\":\"paintings\"},{\"columnName\":\"Location in Gallery\"}],[{\"columnName\":\"paintings\"},{\"columnName\":\"Painting Width\"}],[{\"columnName\":\"paintings\"},{\"columnName\":\"Image URL\"}],[{\"columnName\":\"paintings\"},{\"columnName\":\"Acquisition Credit\"}]]" ;
+	km-dev:hasModelLabel "datasetNationalGallery.json" ;
+	km-dev:hasBaseURI "http://localhost:8080/source/" ;
+	km-dev:hasWorksheetHistory """[
+    {
+        \"commandName\": \"SetMetaPropertyCommand\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"paintings\"},
+                    {\"columnName\": \"Date made\"}
+                ]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"type\": \"other\",
+                \"value\": \"isUriOfClass\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"type\": \"other\",
+                \"value\": \"http://www.w3.org/2002/07/owl#Thing\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"type\": \"other\",
+                \"value\": \"http://www.w3.org/2002/07/owl#Thing1 (add)\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://www.w3.org/2002/07/owl#Thing\",
+                    \"DomainId\": \"http://www.w3.org/2002/07/owl#Thing1 (add)\",
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"DomainLabel\": \"owl:Thing1 (add)\"
+                }]
+            },
+            {
+                \"name\": \"isKey\",
+                \"type\": \"other\",
+                \"value\": false
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": false
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"paintings\\\"},{\\\"columnName\\\":\\\"Date made\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"paintings\\\"},{\\\"columnName\\\":\\\"Date made\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"UnassignSemanticTypeCommand\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"paintings\"},
+                    {\"columnName\": \"Date made\"}
+                ]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": []
+            },
+            {
+                \"name\": \"isKey\",
+                \"type\": \"other\",
+                \"value\": false
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"paintings\\\"},{\\\"columnName\\\":\\\"Date made\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"paintings\\\"},{\\\"columnName\\\":\\\"Date made\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"UnassignSemanticTypeCommand\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"paintings\"},
+                    {\"columnName\": \"Date made\"}
+                ]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": []
+            },
+            {
+                \"name\": \"isKey\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"xsd:dateTime\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"paintings\\\"},{\\\"columnName\\\":\\\"Date made\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"paintings\\\"},{\\\"columnName\\\":\\\"Date made\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"paintings\"},
+                    {\"columnName\": \"Date made\"}
+                ]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://schema.org/Painting\",
+                    \"DomainId\": \"http://schema.org/Painting1 (add)\",
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://schema.org/dateCreated\",
+                    \"DomainLabel\": \"schema:Painting1 (add)\"
+                }]
+            },
+            {
+                \"name\": \"isKey\",
+                \"type\": \"other\",
+                \"value\": false
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": false
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"paintings\\\"},{\\\"columnName\\\":\\\"Date made\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"paintings\\\"},{\\\"columnName\\\":\\\"Date made\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"paintings\"},
+                    {\"columnName\": \"Inventory number\"}
+                ]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://schema.org/Painting\",
+                    \"DomainId\": \"http://schema.org/Painting1\",
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://schema.org/serialNumber\",
+                    \"DomainLabel\": \"schema:Painting1\"
+                }]
+            },
+            {
+                \"name\": \"isKey\",
+                \"type\": \"other\",
+                \"value\": false
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": false
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"paintings\\\"},{\\\"columnName\\\":\\\"Inventory number\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"paintings\\\"},{\\\"columnName\\\":\\\"Inventory number\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"paintings\"},
+                    {\"columnName\": \"Image URL\"}
+                ]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://schema.org/Painting\",
+                    \"DomainId\": \"http://schema.org/Painting1\",
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://schema.org/image\",
+                    \"DomainLabel\": \"schema:Painting1\"
+                }]
+            },
+            {
+                \"name\": \"isKey\",
+                \"type\": \"other\",
+                \"value\": false
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": false
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"paintings\\\"},{\\\"columnName\\\":\\\"Image URL\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"paintings\\\"},{\\\"columnName\\\":\\\"Image URL\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"paintings\"},
+                    {\"columnName\": \"Medium and support\"}
+                ]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://schema.org/Painting\",
+                    \"DomainId\": \"http://schema.org/Painting1\",
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://purl.org/dc/terms/description\",
+                    \"DomainLabel\": \"schema:Painting1\"
+                }]
+            },
+            {
+                \"name\": \"isKey\",
+                \"type\": \"other\",
+                \"value\": false
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": false
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"paintings\\\"},{\\\"columnName\\\":\\\"Medium and support\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"paintings\\\"},{\\\"columnName\\\":\\\"Medium and support\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"paintings\"},
+                    {\"columnName\": \"Artist\"}
+                ]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://schema.org/Painting\",
+                    \"DomainId\": \"http://schema.org/Painting1\",
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://purl.org/dc/terms/creator\",
+                    \"DomainLabel\": \"schema:Painting1\"
+                }]
+            },
+            {
+                \"name\": \"isKey\",
+                \"type\": \"other\",
+                \"value\": false
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": false
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"paintings\\\"},{\\\"columnName\\\":\\\"Artist\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"paintings\\\"},{\\\"columnName\\\":\\\"Artist\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"SetMetaPropertyCommand\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"paintings\"},
+                    {\"columnName\": \"Artist\"}
+                ]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"type\": \"other\",
+                \"value\": \"isUriOfClass\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"type\": \"other\",
+                \"value\": \"http://schema.org/Person\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"type\": \"other\",
+                \"value\": \"http://schema.org/Person1 (add)\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://schema.org/Person\",
+                    \"DomainId\": \"http://schema.org/Person1 (add)\",
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"DomainLabel\": \"schema:Person1 (add)\"
+                }]
+            },
+            {
+                \"name\": \"isKey\",
+                \"type\": \"other\",
+                \"value\": false
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": false
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"paintings\\\"},{\\\"columnName\\\":\\\"Artist\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"paintings\\\"},{\\\"columnName\\\":\\\"Artist\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"ChangeInternalNodeLinksCommand\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"initialEdges\",
+                \"type\": \"other\",
+                \"value\": []
+            },
+            {
+                \"name\": \"alignmentId\",
+                \"type\": \"other\",
+                \"value\": \"WSP2:WS1AL\"
+            },
+            {
+                \"name\": \"newEdges\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"edgeTargetId\": \"http://schema.org/Person1\",
+                    \"edgeId\": \"http://schema.org/creator\",
+                    \"edgeTargetUri\": \"http://schema.org/Person1\",
+                    \"edgeSourceId\": \"http://schema.org/Painting1\",
+                    \"edgeSourceUri\": \"http://schema.org/Painting\"
+                }]
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"paintings\"},
+                    {\"columnName\": \"Artist\"}
+                ]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://schema.org/Person\",
+                    \"DomainId\": \"http://schema.org/Person1\",
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://www.w3.org/2000/01/rdf-schema#label\",
+                    \"DomainLabel\": \"schema:Person1\"
+                }]
+            },
+            {
+                \"name\": \"isKey\",
+                \"type\": \"other\",
+                \"value\": false
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": false
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"paintings\\\"},{\\\"columnName\\\":\\\"Artist\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"paintings\\\"},{\\\"columnName\\\":\\\"Artist\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"paintings\"},
+                    {\"columnName\": \"Artist dates\"}
+                ]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://schema.org/Person\",
+                    \"DomainId\": \"http://schema.org/Person1\",
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://purl.org/dc/terms/date\",
+                    \"DomainLabel\": \"schema:Person1\"
+                }]
+            },
+            {
+                \"name\": \"isKey\",
+                \"type\": \"other\",
+                \"value\": false
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": false
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"paintings\\\"},{\\\"columnName\\\":\\\"Artist dates\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"paintings\\\"},{\\\"columnName\\\":\\\"Artist dates\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"paintings\"},
+                    {\"columnName\": \"Full title\"}
+                ]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://schema.org/Painting\",
+                    \"DomainId\": \"http://schema.org/Painting1\",
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://www.w3.org/2000/01/rdf-schema#label\",
+                    \"DomainLabel\": \"schema:Painting1\"
+                }]
+            },
+            {
+                \"name\": \"isKey\",
+                \"type\": \"other\",
+                \"value\": false
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": false
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"paintings\\\"},{\\\"columnName\\\":\\\"Full title\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"paintings\\\"},{\\\"columnName\\\":\\\"Full title\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"paintings\"},
+                    {\"columnName\": \"Painting Height\"}
+                ]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://schema.org/Painting\",
+                    \"DomainId\": \"http://schema.org/Painting1\",
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://schema.org/height\",
+                    \"DomainLabel\": \"schema:Painting1\"
+                }]
+            },
+            {
+                \"name\": \"isKey\",
+                \"type\": \"other\",
+                \"value\": false
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": false
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"paintings\\\"},{\\\"columnName\\\":\\\"Painting Height\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"paintings\\\"},{\\\"columnName\\\":\\\"Painting Height\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"paintings\"},
+                    {\"columnName\": \"Painting Width\"}
+                ]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://schema.org/Painting\",
+                    \"DomainId\": \"http://schema.org/Painting1\",
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://schema.org/width\",
+                    \"DomainLabel\": \"schema:Painting1\"
+                }]
+            },
+            {
+                \"name\": \"isKey\",
+                \"type\": \"other\",
+                \"value\": false
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": false
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"paintings\\\"},{\\\"columnName\\\":\\\"Painting Width\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"paintings\\\"},{\\\"columnName\\\":\\\"Painting Width\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"paintings\"},
+                    {\"columnName\": \"Acquisition Credit\"}
+                ]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://schema.org/Person\",
+                    \"DomainId\": \"http://schema.org/Person2 (add)\",
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://www.w3.org/2000/01/rdf-schema#label\",
+                    \"DomainLabel\": \"schema:Person2 (add)\"
+                }]
+            },
+            {
+                \"name\": \"isKey\",
+                \"type\": \"other\",
+                \"value\": false
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": false
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"paintings\\\"},{\\\"columnName\\\":\\\"Acquisition Credit\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"paintings\\\"},{\\\"columnName\\\":\\\"Acquisition Credit\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"ChangeInternalNodeLinksCommand\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"initialEdges\",
+                \"type\": \"other\",
+                \"value\": []
+            },
+            {
+                \"name\": \"alignmentId\",
+                \"type\": \"other\",
+                \"value\": \"WSP2:WS1AL\"
+            },
+            {
+                \"name\": \"newEdges\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"edgeTargetId\": \"http://schema.org/Person2\",
+                    \"edgeId\": \"http://schema.org/accountablePerson\",
+                    \"edgeTargetUri\": \"http://schema.org/Person2\",
+                    \"edgeSourceId\": \"http://schema.org/Painting1\",
+                    \"edgeSourceUri\": \"http://schema.org/Painting\"
+                }]
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"paintings\"},
+                    {\"columnName\": \"Acquisition Received\"}
+                ]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://schema.org/Person\",
+                    \"DomainId\": \"http://schema.org/Person2\",
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://purl.org/dc/terms/dateAccepted\",
+                    \"DomainLabel\": \"schema:Person2\"
+                }]
+            },
+            {
+                \"name\": \"isKey\",
+                \"type\": \"other\",
+                \"value\": false
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": false
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"paintings\\\"},{\\\"columnName\\\":\\\"Acquisition Received\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"paintings\\\"},{\\\"columnName\\\":\\\"Acquisition Received\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"paintings\"},
+                    {\"columnName\": \"Image Name\"}
+                ]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://schema.org/URL\",
+                    \"DomainId\": \"http://schema.org/URL1 (add)\",
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://www.w3.org/2000/01/rdf-schema#label\",
+                    \"DomainLabel\": \"schema:URL1 (add)\"
+                }]
+            },
+            {
+                \"name\": \"isKey\",
+                \"type\": \"other\",
+                \"value\": false
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": false
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"paintings\\\"},{\\\"columnName\\\":\\\"Image Name\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"paintings\\\"},{\\\"columnName\\\":\\\"Image Name\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"ChangeInternalNodeLinksCommand\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"initialEdges\",
+                \"type\": \"other\",
+                \"value\": []
+            },
+            {
+                \"name\": \"alignmentId\",
+                \"type\": \"other\",
+                \"value\": \"WSP2:WS1AL\"
+            },
+            {
+                \"name\": \"newEdges\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"edgeTargetId\": \"http://schema.org/URL1\",
+                    \"edgeId\": \"http://schema.org/primaryImageOfPage\",
+                    \"edgeTargetUri\": \"http://schema.org/URL1\",
+                    \"edgeSourceId\": \"http://schema.org/Painting1\",
+                    \"edgeSourceUri\": \"http://schema.org/Painting\"
+                }]
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"SetMetaPropertyCommand\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"paintings\"},
+                    {\"columnName\": \"Image URL\"}
+                ]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"type\": \"other\",
+                \"value\": \"isUriOfClass\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"type\": \"other\",
+                \"value\": \"http://schema.org/URL\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"type\": \"other\",
+                \"value\": \"http://schema.org/URL1\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://schema.org/URL\",
+                    \"DomainId\": \"http://schema.org/URL1\",
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"DomainLabel\": \"schema:URL1\"
+                }]
+            },
+            {
+                \"name\": \"isKey\",
+                \"type\": \"other\",
+                \"value\": false
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": false
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"paintings\\\"},{\\\"columnName\\\":\\\"Image URL\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"paintings\\\"},{\\\"columnName\\\":\\\"Image URL\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"paintings\"},
+                    {\"columnName\": \"Inscription summary\"}
+                ]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://schema.org/Painting\",
+                    \"DomainId\": \"http://schema.org/Painting1\",
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://schema.org/citation\",
+                    \"DomainLabel\": \"schema:Painting1\"
+                }]
+            },
+            {
+                \"name\": \"isKey\",
+                \"type\": \"other\",
+                \"value\": false
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": false
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"paintings\\\"},{\\\"columnName\\\":\\\"Inscription summary\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"paintings\\\"},{\\\"columnName\\\":\\\"Inscription summary\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"paintings\"},
+                    {\"columnName\": \"Group\"}
+                ]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://schema.org/Organization\",
+                    \"DomainId\": \"http://schema.org/Organization1 (add)\",
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://www.w3.org/2000/01/rdf-schema#label\",
+                    \"DomainLabel\": \"schema:Organization1 (add)\"
+                }]
+            },
+            {
+                \"name\": \"isKey\",
+                \"type\": \"other\",
+                \"value\": false
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": false
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"paintings\\\"},{\\\"columnName\\\":\\\"Group\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"paintings\\\"},{\\\"columnName\\\":\\\"Group\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"ChangeInternalNodeLinksCommand\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"initialEdges\",
+                \"type\": \"other\",
+                \"value\": []
+            },
+            {
+                \"name\": \"alignmentId\",
+                \"type\": \"other\",
+                \"value\": \"WSP2:WS1AL\"
+            },
+            {
+                \"name\": \"newEdges\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"edgeTargetId\": \"http://schema.org/Organization1\",
+                    \"edgeId\": \"http://schema.org/provider\",
+                    \"edgeTargetUri\": \"http://schema.org/Organization1\",
+                    \"edgeSourceId\": \"http://schema.org/Painting1\",
+                    \"edgeSourceUri\": \"http://schema.org/Painting\"
+                }]
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"paintings\"},
+                    {\"columnName\": \"Location in Gallery\"}
+                ]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://schema.org/CreativeWork\",
+                    \"DomainId\": \"http://schema.org/CreativeWork1 (add)\",
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://www.w3.org/2000/01/rdf-schema#label\",
+                    \"DomainLabel\": \"schema:CreativeWork1 (add)\"
+                }]
+            },
+            {
+                \"name\": \"isKey\",
+                \"type\": \"other\",
+                \"value\": false
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": false
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"paintings\\\"},{\\\"columnName\\\":\\\"Location in Gallery\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"paintings\\\"},{\\\"columnName\\\":\\\"Location in Gallery\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"ChangeInternalNodeLinksCommand\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"initialEdges\",
+                \"type\": \"other\",
+                \"value\": []
+            },
+            {
+                \"name\": \"alignmentId\",
+                \"type\": \"other\",
+                \"value\": \"WSP2:WS1AL\"
+            },
+            {
+                \"name\": \"newEdges\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"edgeTargetId\": \"http://schema.org/CreativeWork1\",
+                    \"edgeId\": \"http://schema.org/contentLocation\",
+                    \"edgeTargetUri\": \"http://schema.org/CreativeWork1\",
+                    \"edgeSourceId\": \"http://schema.org/Painting1\",
+                    \"edgeSourceUri\": \"http://schema.org/Painting\"
+                }]
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"paintings\"},
+                    {\"columnName\": \"Inscription summary\"}
+                ]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [
+                    {
+                        \"DomainUri\": \"http://schema.org/Painting\",
+                        \"DomainId\": \"http://schema.org/Painting1\",
+                        \"isPrimary\": true,
+                        \"FullType\": \"http://schema.org/citation\",
+                        \"DomainLabel\": \"schema:Painting1\"
+                    },
+                    {
+                        \"DomainUri\": \"http://schema.org/CreativeWork\",
+                        \"DomainId\": \"http://schema.org/CreativeWork1\",
+                        \"isPrimary\": false,
+                        \"FullType\": \"http://schema.org/citation\",
+                        \"DomainLabel\": \"schema:CreativeWork1\"
+                    }
+                ]
+            },
+            {
+                \"name\": \"isKey\",
+                \"type\": \"other\",
+                \"value\": false
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": false
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"paintings\\\"},{\\\"columnName\\\":\\\"Inscription summary\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"paintings\\\"},{\\\"columnName\\\":\\\"Inscription summary\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    }
+]""" .
+
+km-dev:TriplesMap_0380b7ff-383a-4f27-996d-070a259d5ae6 a rr:TriplesMap .
+
+_:node1943mnlcdx1 km-dev:hasTriplesMap km-dev:TriplesMap_0380b7ff-383a-4f27-996d-070a259d5ae6 .
+
+km-dev:TriplesMap_0380b7ff-383a-4f27-996d-070a259d5ae6 km-dev:isPartOfMapping _:node1943mnlcdx1 .
+
+_:node1943mnlcdx2 rr:tableName "datasetNationalGallery.json" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1943mnlcdx1 .
+
+_:node1943mnlcdx1 km-dev:hasLogicalTable _:node1943mnlcdx2 .
+
+km-dev:TriplesMap_0380b7ff-383a-4f27-996d-070a259d5ae6 rr:logicalTable _:node1943mnlcdx2 ;
+	rr:subjectMap _:node1943mnlcdx3 .
+
+_:node1943mnlcdx1 km-dev:hasSubjectMap _:node1943mnlcdx3 .
+
+_:node1943mnlcdx3 km-dev:isPartOfMapping _:node1943mnlcdx1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://schema.org/CreativeWork1" ;
+	rr:class schema:CreativeWork ;
+	rr:termType rr:BlankNode ;
+	km-dev:namePrefix "schema:CreativeWork1" .
+
+km-dev:PredicateObjectMap_30976df4-f899-49f4-815f-1a08e96e6f73 rr:predicate rdfs:label .
+
+_:node1943mnlcdx4 rr:column "[\"paintings\",\"Location in Gallery\"]" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1943mnlcdx1 .
+
+_:node1943mnlcdx1 km-dev:hasObjectMap _:node1943mnlcdx4 .
+
+km-dev:PredicateObjectMap_30976df4-f899-49f4-815f-1a08e96e6f73 rr:objectMap _:node1943mnlcdx4 .
+
+km-dev:TriplesMap_0380b7ff-383a-4f27-996d-070a259d5ae6 rr:predicateObjectMap km-dev:PredicateObjectMap_30976df4-f899-49f4-815f-1a08e96e6f73 .
+
+km-dev:PredicateObjectMap_30976df4-f899-49f4-815f-1a08e96e6f73 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1943mnlcdx1 .
+
+_:node1943mnlcdx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_30976df4-f899-49f4-815f-1a08e96e6f73 .
+
+km-dev:TriplesMap_db01739a-f1da-4a63-b522-a17675ea1e8a a rr:TriplesMap .
+
+_:node1943mnlcdx1 km-dev:hasTriplesMap km-dev:TriplesMap_db01739a-f1da-4a63-b522-a17675ea1e8a .
+
+km-dev:TriplesMap_db01739a-f1da-4a63-b522-a17675ea1e8a km-dev:isPartOfMapping _:node1943mnlcdx1 .
+
+_:node1943mnlcdx5 rr:tableName "datasetNationalGallery.json" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1943mnlcdx1 .
+
+_:node1943mnlcdx1 km-dev:hasLogicalTable _:node1943mnlcdx5 .
+
+km-dev:TriplesMap_db01739a-f1da-4a63-b522-a17675ea1e8a rr:logicalTable _:node1943mnlcdx5 ;
+	rr:subjectMap _:node1943mnlcdx6 .
+
+_:node1943mnlcdx1 km-dev:hasSubjectMap _:node1943mnlcdx6 .
+
+_:node1943mnlcdx6 km-dev:isPartOfMapping _:node1943mnlcdx1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://schema.org/Organization1" ;
+	rr:class schema:Organization ;
+	rr:termType rr:BlankNode ;
+	km-dev:namePrefix "schema:Organization1" .
+
+km-dev:PredicateObjectMap_e4b39c22-468c-4a54-a7cb-5d5824a9236e rr:predicate rdfs:label .
+
+_:node1943mnlcdx7 rr:column "[\"paintings\",\"Group\"]" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1943mnlcdx1 .
+
+_:node1943mnlcdx1 km-dev:hasObjectMap _:node1943mnlcdx7 .
+
+km-dev:PredicateObjectMap_e4b39c22-468c-4a54-a7cb-5d5824a9236e rr:objectMap _:node1943mnlcdx7 .
+
+km-dev:TriplesMap_db01739a-f1da-4a63-b522-a17675ea1e8a rr:predicateObjectMap km-dev:PredicateObjectMap_e4b39c22-468c-4a54-a7cb-5d5824a9236e .
+
+km-dev:PredicateObjectMap_e4b39c22-468c-4a54-a7cb-5d5824a9236e a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1943mnlcdx1 .
+
+_:node1943mnlcdx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_e4b39c22-468c-4a54-a7cb-5d5824a9236e .
+
+km-dev:TriplesMap_9d1cde43-e8e2-43fc-8327-8f8b427a3bec a rr:TriplesMap .
+
+_:node1943mnlcdx1 km-dev:hasTriplesMap km-dev:TriplesMap_9d1cde43-e8e2-43fc-8327-8f8b427a3bec .
+
+km-dev:TriplesMap_9d1cde43-e8e2-43fc-8327-8f8b427a3bec km-dev:isPartOfMapping _:node1943mnlcdx1 .
+
+_:node1943mnlcdx8 rr:tableName "datasetNationalGallery.json" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1943mnlcdx1 .
+
+_:node1943mnlcdx1 km-dev:hasLogicalTable _:node1943mnlcdx8 .
+
+km-dev:TriplesMap_9d1cde43-e8e2-43fc-8327-8f8b427a3bec rr:logicalTable _:node1943mnlcdx8 ;
+	rr:subjectMap _:node1943mnlcdx9 .
+
+_:node1943mnlcdx1 km-dev:hasSubjectMap _:node1943mnlcdx9 .
+
+_:node1943mnlcdx9 km-dev:isPartOfMapping _:node1943mnlcdx1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://schema.org/Painting1" ;
+	rr:class schema:Painting ;
+	rr:termType rr:BlankNode ;
+	km-dev:namePrefix "schema:Painting1" ;
+	a km-dev:steinerTreeRootNode .
+
+km-dev:PredicateObjectMap_702f62ff-88fc-48a3-b8cf-90f84e6edaa4 rr:predicate dcterms:description .
+
+_:node1943mnlcdx10 rr:column "[\"paintings\",\"Medium and support\"]" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1943mnlcdx1 .
+
+_:node1943mnlcdx1 km-dev:hasObjectMap _:node1943mnlcdx10 .
+
+km-dev:PredicateObjectMap_702f62ff-88fc-48a3-b8cf-90f84e6edaa4 rr:objectMap _:node1943mnlcdx10 .
+
+km-dev:TriplesMap_9d1cde43-e8e2-43fc-8327-8f8b427a3bec rr:predicateObjectMap km-dev:PredicateObjectMap_702f62ff-88fc-48a3-b8cf-90f84e6edaa4 .
+
+km-dev:PredicateObjectMap_702f62ff-88fc-48a3-b8cf-90f84e6edaa4 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1943mnlcdx1 .
+
+_:node1943mnlcdx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_702f62ff-88fc-48a3-b8cf-90f84e6edaa4 .
+
+km-dev:PredicateObjectMap_36f9c24e-52f1-4651-9e1b-4bf584e68a88 rr:predicate schema:accountablePerson .
+
+km-dev:RefObjectMap_fa983b05-c2dd-4700-b543-fe1df054e73b a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_d72824aa-8f95-4561-bca3-fd050e05863b ;
+	km-dev:isPartOfMapping _:node1943mnlcdx1 .
+
+_:node1943mnlcdx1 km-dev:hasObjectMap km-dev:RefObjectMap_fa983b05-c2dd-4700-b543-fe1df054e73b .
+
+km-dev:PredicateObjectMap_36f9c24e-52f1-4651-9e1b-4bf584e68a88 rr:objectMap km-dev:RefObjectMap_fa983b05-c2dd-4700-b543-fe1df054e73b .
+
+km-dev:TriplesMap_9d1cde43-e8e2-43fc-8327-8f8b427a3bec rr:predicateObjectMap km-dev:PredicateObjectMap_36f9c24e-52f1-4651-9e1b-4bf584e68a88 .
+
+km-dev:PredicateObjectMap_36f9c24e-52f1-4651-9e1b-4bf584e68a88 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1943mnlcdx1 .
+
+_:node1943mnlcdx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_36f9c24e-52f1-4651-9e1b-4bf584e68a88 .
+
+km-dev:PredicateObjectMap_4a5b1415-acfd-4e9c-9bc5-8fb1acea29ff rr:predicate schema:citation .
+
+_:node1943mnlcdx11 rr:column "[\"paintings\",\"Inscription summary\"]" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1943mnlcdx1 .
+
+_:node1943mnlcdx1 km-dev:hasObjectMap _:node1943mnlcdx11 .
+
+km-dev:PredicateObjectMap_4a5b1415-acfd-4e9c-9bc5-8fb1acea29ff rr:objectMap _:node1943mnlcdx11 .
+
+km-dev:TriplesMap_9d1cde43-e8e2-43fc-8327-8f8b427a3bec rr:predicateObjectMap km-dev:PredicateObjectMap_4a5b1415-acfd-4e9c-9bc5-8fb1acea29ff .
+
+km-dev:PredicateObjectMap_4a5b1415-acfd-4e9c-9bc5-8fb1acea29ff a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1943mnlcdx1 .
+
+_:node1943mnlcdx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_4a5b1415-acfd-4e9c-9bc5-8fb1acea29ff .
+
+km-dev:PredicateObjectMap_816f679b-3fea-4705-91bf-2ae8b213a49d rr:predicate schema:contentLocation .
+
+km-dev:RefObjectMap_8fa8eddd-851b-42f9-b32d-dd023dbc9ff8 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_0380b7ff-383a-4f27-996d-070a259d5ae6 ;
+	km-dev:isPartOfMapping _:node1943mnlcdx1 .
+
+_:node1943mnlcdx1 km-dev:hasObjectMap km-dev:RefObjectMap_8fa8eddd-851b-42f9-b32d-dd023dbc9ff8 .
+
+km-dev:PredicateObjectMap_816f679b-3fea-4705-91bf-2ae8b213a49d rr:objectMap km-dev:RefObjectMap_8fa8eddd-851b-42f9-b32d-dd023dbc9ff8 .
+
+km-dev:TriplesMap_9d1cde43-e8e2-43fc-8327-8f8b427a3bec rr:predicateObjectMap km-dev:PredicateObjectMap_816f679b-3fea-4705-91bf-2ae8b213a49d .
+
+km-dev:PredicateObjectMap_816f679b-3fea-4705-91bf-2ae8b213a49d a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1943mnlcdx1 .
+
+_:node1943mnlcdx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_816f679b-3fea-4705-91bf-2ae8b213a49d .
+
+km-dev:PredicateObjectMap_10349fe0-ea10-4e4a-b08c-4661da472873 rr:predicate schema:creator .
+
+km-dev:RefObjectMap_1c2e7805-befd-41e4-ab65-372587e17676 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_40c3f4a9-c59b-4994-9f73-70cf1a8c3a2c ;
+	km-dev:isPartOfMapping _:node1943mnlcdx1 .
+
+_:node1943mnlcdx1 km-dev:hasObjectMap km-dev:RefObjectMap_1c2e7805-befd-41e4-ab65-372587e17676 .
+
+km-dev:PredicateObjectMap_10349fe0-ea10-4e4a-b08c-4661da472873 rr:objectMap km-dev:RefObjectMap_1c2e7805-befd-41e4-ab65-372587e17676 .
+
+km-dev:TriplesMap_9d1cde43-e8e2-43fc-8327-8f8b427a3bec rr:predicateObjectMap km-dev:PredicateObjectMap_10349fe0-ea10-4e4a-b08c-4661da472873 .
+
+km-dev:PredicateObjectMap_10349fe0-ea10-4e4a-b08c-4661da472873 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1943mnlcdx1 .
+
+_:node1943mnlcdx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_10349fe0-ea10-4e4a-b08c-4661da472873 .
+
+km-dev:PredicateObjectMap_1b5258ce-68e0-495c-be23-184d8eab3120 rr:predicate schema:dateCreated .
+
+_:node1943mnlcdx12 rr:column "[\"paintings\",\"Date made\"]" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1943mnlcdx1 .
+
+_:node1943mnlcdx1 km-dev:hasObjectMap _:node1943mnlcdx12 .
+
+km-dev:PredicateObjectMap_1b5258ce-68e0-495c-be23-184d8eab3120 rr:objectMap _:node1943mnlcdx12 .
+
+km-dev:TriplesMap_9d1cde43-e8e2-43fc-8327-8f8b427a3bec rr:predicateObjectMap km-dev:PredicateObjectMap_1b5258ce-68e0-495c-be23-184d8eab3120 .
+
+km-dev:PredicateObjectMap_1b5258ce-68e0-495c-be23-184d8eab3120 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1943mnlcdx1 .
+
+_:node1943mnlcdx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_1b5258ce-68e0-495c-be23-184d8eab3120 .
+
+km-dev:PredicateObjectMap_bdd64f91-c05d-49ac-8b1e-a6919e42051c rr:predicate schema:height .
+
+_:node1943mnlcdx13 rr:column "[\"paintings\",\"Painting Height\"]" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1943mnlcdx1 .
+
+_:node1943mnlcdx1 km-dev:hasObjectMap _:node1943mnlcdx13 .
+
+km-dev:PredicateObjectMap_bdd64f91-c05d-49ac-8b1e-a6919e42051c rr:objectMap _:node1943mnlcdx13 .
+
+km-dev:TriplesMap_9d1cde43-e8e2-43fc-8327-8f8b427a3bec rr:predicateObjectMap km-dev:PredicateObjectMap_bdd64f91-c05d-49ac-8b1e-a6919e42051c .
+
+km-dev:PredicateObjectMap_bdd64f91-c05d-49ac-8b1e-a6919e42051c a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1943mnlcdx1 .
+
+_:node1943mnlcdx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_bdd64f91-c05d-49ac-8b1e-a6919e42051c .
+
+km-dev:PredicateObjectMap_60fa32fb-694b-4fd0-9ece-05edbf280db3 rr:predicate schema:primaryImageOfPage .
+
+km-dev:RefObjectMap_e4fe7ac1-b857-47c1-beea-e5c459e7365b a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_a5f9cfe9-86da-4c22-9797-269f84d22a90 ;
+	km-dev:isPartOfMapping _:node1943mnlcdx1 .
+
+_:node1943mnlcdx1 km-dev:hasObjectMap km-dev:RefObjectMap_e4fe7ac1-b857-47c1-beea-e5c459e7365b .
+
+km-dev:PredicateObjectMap_60fa32fb-694b-4fd0-9ece-05edbf280db3 rr:objectMap km-dev:RefObjectMap_e4fe7ac1-b857-47c1-beea-e5c459e7365b .
+
+km-dev:TriplesMap_9d1cde43-e8e2-43fc-8327-8f8b427a3bec rr:predicateObjectMap km-dev:PredicateObjectMap_60fa32fb-694b-4fd0-9ece-05edbf280db3 .
+
+km-dev:PredicateObjectMap_60fa32fb-694b-4fd0-9ece-05edbf280db3 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1943mnlcdx1 .
+
+_:node1943mnlcdx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_60fa32fb-694b-4fd0-9ece-05edbf280db3 .
+
+km-dev:PredicateObjectMap_2e987178-0ef1-47e6-868e-e12e7cc2099f rr:predicate schema:provider .
+
+km-dev:RefObjectMap_2d5ac73d-e2e0-4415-9c25-73d7ef24779f a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_db01739a-f1da-4a63-b522-a17675ea1e8a ;
+	km-dev:isPartOfMapping _:node1943mnlcdx1 .
+
+_:node1943mnlcdx1 km-dev:hasObjectMap km-dev:RefObjectMap_2d5ac73d-e2e0-4415-9c25-73d7ef24779f .
+
+km-dev:PredicateObjectMap_2e987178-0ef1-47e6-868e-e12e7cc2099f rr:objectMap km-dev:RefObjectMap_2d5ac73d-e2e0-4415-9c25-73d7ef24779f .
+
+km-dev:TriplesMap_9d1cde43-e8e2-43fc-8327-8f8b427a3bec rr:predicateObjectMap km-dev:PredicateObjectMap_2e987178-0ef1-47e6-868e-e12e7cc2099f .
+
+km-dev:PredicateObjectMap_2e987178-0ef1-47e6-868e-e12e7cc2099f a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1943mnlcdx1 .
+
+_:node1943mnlcdx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_2e987178-0ef1-47e6-868e-e12e7cc2099f .
+
+km-dev:PredicateObjectMap_3eff36fc-4168-48f8-9018-2bf91c99137d rr:predicate schema:serialNumber .
+
+_:node1943mnlcdx14 rr:column "[\"paintings\",\"Inventory number\"]" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1943mnlcdx1 .
+
+_:node1943mnlcdx1 km-dev:hasObjectMap _:node1943mnlcdx14 .
+
+km-dev:PredicateObjectMap_3eff36fc-4168-48f8-9018-2bf91c99137d rr:objectMap _:node1943mnlcdx14 .
+
+km-dev:TriplesMap_9d1cde43-e8e2-43fc-8327-8f8b427a3bec rr:predicateObjectMap km-dev:PredicateObjectMap_3eff36fc-4168-48f8-9018-2bf91c99137d .
+
+km-dev:PredicateObjectMap_3eff36fc-4168-48f8-9018-2bf91c99137d a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1943mnlcdx1 .
+
+_:node1943mnlcdx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_3eff36fc-4168-48f8-9018-2bf91c99137d .
+
+km-dev:PredicateObjectMap_3cc5730e-142f-4cc5-9a96-733840e49bea rr:predicate schema:width .
+
+_:node1943mnlcdx15 rr:column "[\"paintings\",\"Painting Width\"]" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1943mnlcdx1 .
+
+_:node1943mnlcdx1 km-dev:hasObjectMap _:node1943mnlcdx15 .
+
+km-dev:PredicateObjectMap_3cc5730e-142f-4cc5-9a96-733840e49bea rr:objectMap _:node1943mnlcdx15 .
+
+km-dev:TriplesMap_9d1cde43-e8e2-43fc-8327-8f8b427a3bec rr:predicateObjectMap km-dev:PredicateObjectMap_3cc5730e-142f-4cc5-9a96-733840e49bea .
+
+km-dev:PredicateObjectMap_3cc5730e-142f-4cc5-9a96-733840e49bea a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1943mnlcdx1 .
+
+_:node1943mnlcdx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_3cc5730e-142f-4cc5-9a96-733840e49bea .
+
+km-dev:PredicateObjectMap_dc589ee7-e602-4b81-ab02-783e8a712aae rr:predicate rdfs:label .
+
+_:node1943mnlcdx16 rr:column "[\"paintings\",\"Full title\"]" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1943mnlcdx1 .
+
+_:node1943mnlcdx1 km-dev:hasObjectMap _:node1943mnlcdx16 .
+
+km-dev:PredicateObjectMap_dc589ee7-e602-4b81-ab02-783e8a712aae rr:objectMap _:node1943mnlcdx16 .
+
+km-dev:TriplesMap_9d1cde43-e8e2-43fc-8327-8f8b427a3bec rr:predicateObjectMap km-dev:PredicateObjectMap_dc589ee7-e602-4b81-ab02-783e8a712aae .
+
+km-dev:PredicateObjectMap_dc589ee7-e602-4b81-ab02-783e8a712aae a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1943mnlcdx1 .
+
+_:node1943mnlcdx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_dc589ee7-e602-4b81-ab02-783e8a712aae .
+
+km-dev:TriplesMap_d72824aa-8f95-4561-bca3-fd050e05863b a rr:TriplesMap .
+
+_:node1943mnlcdx1 km-dev:hasTriplesMap km-dev:TriplesMap_d72824aa-8f95-4561-bca3-fd050e05863b .
+
+km-dev:TriplesMap_d72824aa-8f95-4561-bca3-fd050e05863b km-dev:isPartOfMapping _:node1943mnlcdx1 .
+
+_:node1943mnlcdx17 rr:tableName "datasetNationalGallery.json" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1943mnlcdx1 .
+
+_:node1943mnlcdx1 km-dev:hasLogicalTable _:node1943mnlcdx17 .
+
+km-dev:TriplesMap_d72824aa-8f95-4561-bca3-fd050e05863b rr:logicalTable _:node1943mnlcdx17 ;
+	rr:subjectMap _:node1943mnlcdx18 .
+
+_:node1943mnlcdx1 km-dev:hasSubjectMap _:node1943mnlcdx18 .
+
+_:node1943mnlcdx18 km-dev:isPartOfMapping _:node1943mnlcdx1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://schema.org/Person2" ;
+	rr:class schema:Person ;
+	rr:termType rr:BlankNode ;
+	km-dev:namePrefix "schema:Person2" .
+
+km-dev:PredicateObjectMap_140ad3cc-8efb-4ef4-959b-b014f286102a rr:predicate dcterms:dateAccepted .
+
+_:node1943mnlcdx19 rr:column "[\"paintings\",\"Acquisition Received\"]" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1943mnlcdx1 .
+
+_:node1943mnlcdx1 km-dev:hasObjectMap _:node1943mnlcdx19 .
+
+km-dev:PredicateObjectMap_140ad3cc-8efb-4ef4-959b-b014f286102a rr:objectMap _:node1943mnlcdx19 .
+
+km-dev:TriplesMap_d72824aa-8f95-4561-bca3-fd050e05863b rr:predicateObjectMap km-dev:PredicateObjectMap_140ad3cc-8efb-4ef4-959b-b014f286102a .
+
+km-dev:PredicateObjectMap_140ad3cc-8efb-4ef4-959b-b014f286102a a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1943mnlcdx1 .
+
+_:node1943mnlcdx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_140ad3cc-8efb-4ef4-959b-b014f286102a .
+
+km-dev:PredicateObjectMap_2e5100c7-23b9-4d38-bcae-4a6d5dc6fee5 rr:predicate rdfs:label .
+
+_:node1943mnlcdx20 rr:column "[\"paintings\",\"Acquisition Credit\"]" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1943mnlcdx1 .
+
+_:node1943mnlcdx1 km-dev:hasObjectMap _:node1943mnlcdx20 .
+
+km-dev:PredicateObjectMap_2e5100c7-23b9-4d38-bcae-4a6d5dc6fee5 rr:objectMap _:node1943mnlcdx20 .
+
+km-dev:TriplesMap_d72824aa-8f95-4561-bca3-fd050e05863b rr:predicateObjectMap km-dev:PredicateObjectMap_2e5100c7-23b9-4d38-bcae-4a6d5dc6fee5 .
+
+km-dev:PredicateObjectMap_2e5100c7-23b9-4d38-bcae-4a6d5dc6fee5 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1943mnlcdx1 .
+
+_:node1943mnlcdx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_2e5100c7-23b9-4d38-bcae-4a6d5dc6fee5 .
+
+km-dev:TriplesMap_40c3f4a9-c59b-4994-9f73-70cf1a8c3a2c a rr:TriplesMap .
+
+_:node1943mnlcdx1 km-dev:hasTriplesMap km-dev:TriplesMap_40c3f4a9-c59b-4994-9f73-70cf1a8c3a2c .
+
+km-dev:TriplesMap_40c3f4a9-c59b-4994-9f73-70cf1a8c3a2c km-dev:isPartOfMapping _:node1943mnlcdx1 .
+
+_:node1943mnlcdx21 rr:tableName "datasetNationalGallery.json" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1943mnlcdx1 .
+
+_:node1943mnlcdx1 km-dev:hasLogicalTable _:node1943mnlcdx21 .
+
+km-dev:TriplesMap_40c3f4a9-c59b-4994-9f73-70cf1a8c3a2c rr:logicalTable _:node1943mnlcdx21 ;
+	rr:subjectMap _:node1943mnlcdx22 .
+
+_:node1943mnlcdx1 km-dev:hasSubjectMap _:node1943mnlcdx22 .
+
+_:node1943mnlcdx22 km-dev:isPartOfMapping _:node1943mnlcdx1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://schema.org/Person1" ;
+	rr:class schema:Person ;
+	rr:termType rr:BlankNode ;
+	km-dev:namePrefix "schema:Person1" .
+
+km-dev:PredicateObjectMap_c6b203e1-038d-42ca-9b4a-cd0a94c5fab8 rr:predicate dcterms:date .
+
+_:node1943mnlcdx23 rr:column "[\"paintings\",\"Artist dates\"]" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1943mnlcdx1 .
+
+_:node1943mnlcdx1 km-dev:hasObjectMap _:node1943mnlcdx23 .
+
+km-dev:PredicateObjectMap_c6b203e1-038d-42ca-9b4a-cd0a94c5fab8 rr:objectMap _:node1943mnlcdx23 .
+
+km-dev:TriplesMap_40c3f4a9-c59b-4994-9f73-70cf1a8c3a2c rr:predicateObjectMap km-dev:PredicateObjectMap_c6b203e1-038d-42ca-9b4a-cd0a94c5fab8 .
+
+km-dev:PredicateObjectMap_c6b203e1-038d-42ca-9b4a-cd0a94c5fab8 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1943mnlcdx1 .
+
+_:node1943mnlcdx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_c6b203e1-038d-42ca-9b4a-cd0a94c5fab8 .
+
+km-dev:PredicateObjectMap_01302441-e50e-4079-bc08-c10367cf322f rr:predicate rdfs:label .
+
+_:node1943mnlcdx24 rr:column "[\"paintings\",\"Artist\"]" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1943mnlcdx1 .
+
+_:node1943mnlcdx1 km-dev:hasObjectMap _:node1943mnlcdx24 .
+
+km-dev:PredicateObjectMap_01302441-e50e-4079-bc08-c10367cf322f rr:objectMap _:node1943mnlcdx24 .
+
+km-dev:TriplesMap_40c3f4a9-c59b-4994-9f73-70cf1a8c3a2c rr:predicateObjectMap km-dev:PredicateObjectMap_01302441-e50e-4079-bc08-c10367cf322f .
+
+km-dev:PredicateObjectMap_01302441-e50e-4079-bc08-c10367cf322f a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1943mnlcdx1 .
+
+_:node1943mnlcdx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_01302441-e50e-4079-bc08-c10367cf322f .
+
+km-dev:TriplesMap_a5f9cfe9-86da-4c22-9797-269f84d22a90 a rr:TriplesMap .
+
+_:node1943mnlcdx1 km-dev:hasTriplesMap km-dev:TriplesMap_a5f9cfe9-86da-4c22-9797-269f84d22a90 .
+
+km-dev:TriplesMap_a5f9cfe9-86da-4c22-9797-269f84d22a90 km-dev:isPartOfMapping _:node1943mnlcdx1 .
+
+_:node1943mnlcdx25 rr:tableName "datasetNationalGallery.json" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1943mnlcdx1 .
+
+_:node1943mnlcdx1 km-dev:hasLogicalTable _:node1943mnlcdx25 .
+
+km-dev:TriplesMap_a5f9cfe9-86da-4c22-9797-269f84d22a90 rr:logicalTable _:node1943mnlcdx25 ;
+	rr:subjectMap _:node1943mnlcdx26 .
+
+_:node1943mnlcdx1 km-dev:hasSubjectMap _:node1943mnlcdx26 .
+
+_:node1943mnlcdx26 km-dev:isPartOfMapping _:node1943mnlcdx1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://schema.org/URL1" ;
+	rr:class schema:URL ;
+	rr:template "{[\"paintings\",\"Image URL\"]}" .
+
+km-dev:PredicateObjectMap_08fd7571-43fd-4b72-b943-d6714c2ed28c rr:predicate rdfs:label .
+
+_:node1943mnlcdx27 rr:column "[\"paintings\",\"Image Name\"]" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1943mnlcdx1 .
+
+_:node1943mnlcdx1 km-dev:hasObjectMap _:node1943mnlcdx27 .
+
+km-dev:PredicateObjectMap_08fd7571-43fd-4b72-b943-d6714c2ed28c rr:objectMap _:node1943mnlcdx27 .
+
+km-dev:TriplesMap_a5f9cfe9-86da-4c22-9797-269f84d22a90 rr:predicateObjectMap km-dev:PredicateObjectMap_08fd7571-43fd-4b72-b943-d6714c2ed28c .
+
+km-dev:PredicateObjectMap_08fd7571-43fd-4b72-b943-d6714c2ed28c a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1943mnlcdx1 .
+
+_:node1943mnlcdx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_08fd7571-43fd-4b72-b943-d6714c2ed28c .

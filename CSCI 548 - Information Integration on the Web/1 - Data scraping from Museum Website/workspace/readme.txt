@@ -1,0 +1,1 @@
+In order to run the .java class, the lib files need to be added to the build path. And it requires JAVA SDK 1.6 or higher.

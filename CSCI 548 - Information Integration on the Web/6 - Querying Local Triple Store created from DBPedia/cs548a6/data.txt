@@ -1,0 +1,121 @@
+University Name	City	Latitude	Longitude
+Point Loma Nazarene University	San Diego	32.7169	-117.251
+Lincoln Law School of Sacramento	Sacramento, California	38.5722	-121.464
+Lincoln Law School of San Jose	San Jose, California	37.3363	-121.891
+University of Northern California, Lorenzo Pati%C3%B1o School of Law	Sacramento, California	38.5797	-121.493
+Pacific School of Religion	Berkeley, California	37.8766	-122.263
+Southwestern Law School	Los Angeles	34.0611	-118.288
+Loma Linda University School of Public Health	Loma Linda, California	34.0523	-117.26
+NewSchool of Architecture and Design	San Diego	32.7133	-117.153
+Abraham Lincoln University	Los Angeles	34.0614	-118.301
+Western Sierra Law School	San Diego	32.8103	-117.141
+Stanford University	Stanford, California	37.43	-122.17
+Antioch University Santa Barbara	Santa Barbara, California	34.423	-119.696
+California InterContinental University	Diamond Bar, California	33.9789	-118.416
+Graziadio School of Business and Management	Malibu, California	33.9773	-118.392
+University of La Verne	La Verne, California	34.1013	-117.771
+College of Osteopathic Medicine of the Pacific	Pomona, California	34.0587	-117.743
+Franciscan School of Theology	Berkeley, California	37.8772	-122.261
+Pacific Coast University	Long Beach, California	33.7861	-118.141
+San Francisco Law School	San Francisco	37.7728	-122.423
+University of San Francisco	San Francisco	37.7794	-122.452
+University of Santa Monica	Santa Monica, California	34.0324	-118.482
+Vanguard University of Southern California	Costa Mesa, California	33.663	-117.9
+Whittier College	Whittier, California	33.9781	-118.03
+Whittier Law School	Costa Mesa, California	33.6936	-117.918
+Santa Clara University School of Law	Santa Clara, California	37.3486	-121.939
+Loma Linda University School of Allied Health Professions	Loma Linda, California	34.0525	-117.26
+Anaheim University	Anaheim, California	33.8169	-117.888
+Azusa Pacific University	Azusa, California	34.1297	-117.889
+Glendale University College of Law	Glendale, California	34.1489	-118.246
+John F. Kennedy University	Pleasant Hill, California	37.9567	-122.055
+Singularity University	Moffett Federal Airfield	37.4152	-122.063
+Trinity Law School	Santa Ana, California	33.7656	-117.852
+USC Marshall School of Business	Los Angeles@en	34.0205	-118.286
+University of the Pacific (United States)	Stockton, California , San Francisco, and Sacramento@en	37.9795	-121.313
+Santa Clara University School of Engineering	Santa Clara, California	37.3511	-121.94
+Art Center College of Design	Pasadena, California	34.1692	-118.185
+Loyola Marymount University	Los Angeles	33.97	-118.418
+Monterey Institute of International Studies	Monterey, California	36.5997	-121.897
+California Western School of Law	San Diego	32.7225	-117.162
+Patten University	Oakland, California	37.7863	-122.22
+Touro University California	Vallejo, California	38.087	-122.264
+University of Southern California		34.0205	-118.286
+Silicon Valley University	San Jose, California		
+Taft Law School	Santa Ana, California		
+Los Angeles Recording School	Los Angeles		
+California Southern University	Irvine, California		
+California Southern University	Irvine@en		
+Loma Linda University School of Dentistry	Loma Linda, California		
+USC School of Architecture	Los Angeles		
+Occidental College	Los Angeles		
+University of the West	Rosemead, California		
+San Luis Rey College	Oceanside, California		
+USC Marshall Executive Education	Los Angeles		
+Antioch University Los Angeles	Culver City, California		
+Keck Graduate Institute of Applied Life Sciences	Claremont, California		
+Fashion Institute of Design & Merchandising	Los Angeles		
+Pacific Oaks College	Pasadena, California		
+West Coast University	Irvine, California		
+Mount Madonna Institute	Watsonville, California		
+California College of Ayurveda	Nevada City		
+Conservatory of Music, University of the Pacific	Stockton, California		
+United States University	Chula Vista, California		
+Culinary Institute of America at Greystone	St. Helena, California		
+Keck School of Medicine of USC	Los Angeles		
+American Baptist Seminary of the West	Berkeley, California	37.865	-122.256
+Western University College of Veterinary Medicine	Pomona, California	34.0587	-117.743
+Latin American Bible Institute, California	La Puente, California	34.0314	-117.989
+Western University College of Podiatric Medicine	Pomona, California	34.0587	-117.743
+California Southern Law School	Riverside, California	33.9591	-117.391
+McMillan Academy of Law	La Mesa, California	32.7633	-117.02
+Stanford Law School	Stanford, California	37.4242	-122.168
+Palo Alto University	Palo Alto@en	37.3823	-122.188
+San Joaquin College of Law	Clovis, California	36.8244	-119.698
+Brandman University	Irvine, California	33.656	-117.769
+University of La Verne College of Law	Ontario, California	34.0664	-117.647
+Pepperdine University	Malibu, California	34.0387	-118.708
+University of San Francisco School of Law	San Francisco	37.7747	-122.452
+Cal Northern School of Law	Chico, California	39.7744	-121.839
+Empire College School of Law	Santa Rosa, California	38.4674	-122.729
+Humphreys College Laurence Drivon School of Law	Stockton, California	38.0111	-121.316
+Monterey College of Law	Seaside, California	36.5967	-121.891
+Santa Barbara & Ventura Colleges of Law	Santa Barbara and Ventura@en	34.4246	-119.705
+University of Silicon Valley Law School	Gilroy, California	37.0208	-121.518
+Stanford Graduate School of Education	Stanford, California	37.43	-122.17
+USC School of Dramatic Arts	Los Angeles	34.0231	-118.286
+American Sports University	San Bernardino, California	34.1063	-117.292
+Chapman University	Orange, California	33.7928	-117.851
+Cogswell Polytechnical College	Sunnyvale, California	37.407	-122.024
+Loyola Law School	Los Angeles	34.0486	-118.271
+Pacific States University	Los Angeles	34.045	-118.309
+Northwestern California University School of Law	Sacramento, California	38.6058	-121.512
+Pacific Union College	Angwin, California	38.5693	-122.441
+USC Viterbi School of Engineering	Los Angeles	34.02	-118.289
+Northwestern Polytechnic University	Fremont, California	37.4778	-121.926
+American Heritage University of Southern California	San Bernardino, California		
+Herguan University	Sunnyvale, California		
+Robert Day School	Claremont, California		
+Southern California University of Health Sciences	Whittier, California		
+Kensington College	Santa Ana, California		
+University of West Los Angeles	Inglewood and Chatsworth@en		
+Olivet University	San Francisco		
+Simpson University	Redding, California		
+USC Rossier School of Education	Los Angeles		
+Drexel University Sacramento	Sacramento, California		
+St. Francis School of Law	Redwood City, California		
+Academy of Chinese Culture and Health Sciences	Oakland, California		
+Bethany University	Scotts Valley, California	37.075	-121.994
+Chapman University School of Law	Orange, California	33.7939	-117.851
+Epic Bible College	Sacramento, California	38.6618	-121.367
+Pepperdine University School of Law	Malibu, California	34.044	-118.709
+KGI School of Pharmacy	Claremont, California	34.0933	-117.724
+National Hispanic University	San Jose, California	37.3591	-121.816
+McGeorge School of Law	Sacramento, California	38.5492	-121.473
+San Diego Christian College	Santee, California	32.804	-116.906
+University of San Diego	San Diego	32.7711	-117.188
+Platt College (San Diego)	San Diego	32.7637	-117.064
+University of San Diego School of Law	San Diego	32.7719	-117.188
+Southern California Institute of Law	Santa Barbara and Ventura@en	34.2669	-119.213
+The Art Institute of California %E2%80%93 Hollywood	North Hollywood, Los Angeles	34.0614	-118.299
+Mount St. Mary's College	Los Angeles		
